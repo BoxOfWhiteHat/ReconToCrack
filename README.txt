@@ -8,3 +8,4 @@
                   #This Tool Can Be Usefull With a Server For Faster Cracking
 install:
           python3 install.py
+          use Torrent inside Konashi Folder For Download Wordlists
