@@ -4,7 +4,7 @@
 
 #Wpa2ToHashcat v1 : 
                   #Auto Capture Data And Cracking Using (Hashcat) + wordlists (Kanoshi) 
-                  #Tested in Kali Linux (root)
+                  #Tested in Kali Linux (root) and DragonOS Focal 
                   #This Tool Can Be Usefull With a Server + (GPU) For Faster Result
 install:
           python3 install.py
