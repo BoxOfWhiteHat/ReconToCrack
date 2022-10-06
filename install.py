@@ -7,7 +7,7 @@ from termcolor import cprint
 def install():
     cprint("[*]Install Requirement ...","green",attrs=["bold"])
     print("")
-    os.system("apt-get install hcxdumptool &&  pip3 install termcolor ")
+    os.system("apt-get install hcxdumptool  hashcat &&  pip3 install termcolor ")
     print("")
     if os.path.exists("/root/ReconToCrack/output"):
        print("ALL IS OK ..")
