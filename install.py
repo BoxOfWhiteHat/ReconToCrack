@@ -56,7 +56,7 @@ def install():
              cprint("Folder Knoashi Created","green",attrs=["bold"])
              os.system("cd /usr/src/ReconToCrack && chmod +x * && mv *.torrent /usr/src/ReconToCrack/Konashi ")
              os.system("sudo rm /usr/src/ReconToCrack/Wpa2ToHashcat  && sudo rm /usr/src/ReconToCrack/Master")
-             os.system("cd /usr/src/ReconToCrack  && wget https://github.com/hashcat/hashcat/releases/download/v6.2.5/hashcat-6.2.5.7z ")  
+             os.system("cd /usr/src/ReconToCrack  && sudo wget https://github.com/hashcat/hashcat/releases/download/v6.2.5/hashcat-6.2.5.7z ")  
              print("")
              cprint("extract hashcat-6.2.5.7z and rename to hashcat ","green",attrs=["bold"])
              
