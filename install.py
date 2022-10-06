@@ -22,6 +22,6 @@ def install():
     if not os.path.exists("/root/ReconToCrack/Kaonashi"):
        os.system("cd /root/ReconToCrack && mkdir Konashi")
        cprint("Folder Knoashi Created","green",attrs=["bold"])
-       os.system("cd /root/ReconToCrack && chmod +x * && cp *.torrent /root/ReconToCrack/konashi ")
+       os.system("cd /root/ReconToCrack && chmod +x * && cp *.torrent /root/ReconToCrack/Konashi ")
 install()
       
