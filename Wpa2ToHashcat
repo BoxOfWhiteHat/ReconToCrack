@@ -12,9 +12,17 @@ def ReconToCrack():
     print("")
     os.system("pyfiglet   -j center -w 80 -f future [+]Wpa2ToHashcat[+] --color=YELLOW ")
     print("")
-    
+    interface=input(termcolor.colored("[+]Monitor Mode : ","white",attrs=["bold"]))
+    os.system("airmon-ng start " + "\t" + interface )
+    print("")
+    os.system("iwconfig")
+    print("")
+    Hcx=input(termcolor.colored("[+]Enter Monitor Interface >> " ,"white",attrs=["bold"]))
+    Path=(" > /usr/src/ReconToCrack/output/BSSID.txt")
     cprint("[+]After 1 Min type Ctrl-C ","yellow",attrs=["bold"])
-    os.system("hcxdumptool --do_rcascan -i wlan1mon > /root/ReconToCrack/output/BSSID.txt")
+    
+    os.system("hcxdumptool --do_rcascan -i "+  "\t" + Hcx + "\t" +  Path)
+    
     time.sleep(3)
     #os.system("gnome-terminal -- tail -f /root/ReconToCrack/output/BSSID.txt &")
     time.sleep(5)
