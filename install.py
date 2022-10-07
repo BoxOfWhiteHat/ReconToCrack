@@ -29,9 +29,9 @@ def install():
           os.system("cd /root/ReconToCrack && mkdir Result")
           cprint("Folder Result Created","green",attrs=["bold"])
        if not os.path.exists("/root/ReconToCrack/Kaonashi"):
-          os.system("cd /root/ReconToCrack && mkdir Kaonashi")
+          os.system("cd /root/ReconToCrack && mkdir Kaonashi && cd kaonashi && mkdir wordlists")
           cprint("Folder Knoashi Created","green",attrs=["bold"])
-          os.system("cd /root/ReconToCrack && chmod +x * && mv *.torrent /root/ReconToCrack/Kaonashi ")
+          os.system("cd /root/ReconToCrack && chmod +x * && mv *.torrent /root/ReconToCrack/Kaonashi/wordlists ")
           os.system("rm /usr/src/ReconToCrack/DragonWpa2ToHashcat  && rm /usr/src/ReconToCrack/DragonMaster")
     if OsInstaller == Cemaxecuter:  
           cprint("[*]Install DragonOs Requirement ...","green",attrs=["bold"])
@@ -52,9 +52,9 @@ def install():
              os.system("cd /usr/src/ReconToCrack && mkdir Result")
              cprint("Folder Result Created","green",attrs=["bold"])
           if not os.path.exists("/usr/src/ReconToCrack/Kaonashi"):
-             os.system("cd /usr/src/ReconToCrack && mkdir Kaonashi")
+             os.system("cd /usr/src/ReconToCrack && mkdir Kaonashi && cd kaonashi && mkdir wordlists ")
              cprint("Folder Knoashi Created","green",attrs=["bold"])
-             os.system("cd /usr/src/ReconToCrack && chmod +x * && mv *.torrent /usr/src/ReconToCrack/Kaonashi ")
+             os.system("cd /usr/src/ReconToCrack && chmod +x * && mv *.torrent /usr/src/ReconToCrack/Kaonashi/wordlists  ")
              os.system("sudo rm /usr/src/ReconToCrack/Wpa2ToHashcat  && sudo rm /usr/src/ReconToCrack/Master")
              os.system("cd /usr/src/ReconToCrack  && sudo wget https://github.com/hashcat/hashcat/releases/download/v6.2.5/hashcat-6.2.5.7z ")  
              print("")
