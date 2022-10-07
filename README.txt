@@ -1,4 +1,4 @@
-BoxOfWhiteHat
+<b>BoxOfWhiteHat
 
 
 #Wpa2ToHashcat v1 : 
