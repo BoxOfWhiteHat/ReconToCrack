@@ -3,7 +3,6 @@
 
 BoxOfWhiteHat
 
-
 #Wpa2ToHashcat v1 : 
                   #Auto Capture Data And Cracking Using (Hashcat) + wordlists (Kaonashi) 
                   #Tested in Kali Linux (root) and DragonOS Focal use Path  (/usr/src) to install ReconToCrack
