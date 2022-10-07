@@ -8,9 +8,14 @@ from termcolor import colored , cprint
 
 
 def ReconToCrack():
+    os.system("service NetworkManager stop ")
+    os.system("service wpa_supplicant stop")
     os.system("clear")
     print("")
     os.system("pyfiglet   -j center -w 80 -f future [+]Wpa2ToHashcat[+] --color=YELLOW ")
+    print("")
+    print("[+]Card Exists in You Machine:","yellow",attrs=["bold"])
+    os.system("ifconfig | grep wlan* ")
     print("")
     interface=input(termcolor.colored("[+]Monitor Mode : ","white",attrs=["bold"]))
     os.system("airmon-ng start " + "\t" + interface )
