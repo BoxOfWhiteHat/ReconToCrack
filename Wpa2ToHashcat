@@ -15,6 +15,7 @@ def ReconToCrack():
     os.system("pyfiglet   -j center -w 80 -f future [+]Wpa2ToHashcat[+] --color=YELLOW ")
     print("")
     cprint("[+]Card Exists in You Machine:","yellow",attrs=["bold"])
+    print("")
     os.system("ifconfig | grep wlan* ")
     print("")
     interface=input(termcolor.colored("[+]Monitor Mode : ","white",attrs=["bold"]))
