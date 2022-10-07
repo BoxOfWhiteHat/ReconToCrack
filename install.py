@@ -29,7 +29,7 @@ def install():
           os.system("cd /root/ReconToCrack && mkdir Result")
           cprint("Folder Result Created","green",attrs=["bold"])
        if not os.path.exists("/root/ReconToCrack/Kaonashi"):
-          os.system("cd /root/ReconToCrack && mkdir Kaonashi && cd kaonashi && mkdir wordlists")
+          os.system("cd /root/ReconToCrack && mkdir Kaonashi && cd Kaonashi && mkdir wordlists")
           cprint("Folder Knoashi Created","green",attrs=["bold"])
           os.system("cd /root/ReconToCrack && chmod +x * && mv *.torrent /root/ReconToCrack/Kaonashi/wordlists ")
           os.system("rm /usr/src/ReconToCrack/DragonWpa2ToHashcat  && rm /usr/src/ReconToCrack/DragonMaster")
@@ -52,7 +52,7 @@ def install():
              os.system("cd /usr/src/ReconToCrack && mkdir Result")
              cprint("Folder Result Created","green",attrs=["bold"])
           if not os.path.exists("/usr/src/ReconToCrack/Kaonashi"):
-             os.system("cd /usr/src/ReconToCrack && mkdir Kaonashi && cd kaonashi && mkdir wordlists ")
+             os.system("cd /usr/src/ReconToCrack && mkdir Kaonashi && cd Kaonashi && mkdir wordlists ")
              cprint("Folder Knoashi Created","green",attrs=["bold"])
              os.system("cd /usr/src/ReconToCrack && chmod +x * && mv *.torrent /usr/src/ReconToCrack/Kaonashi/wordlists  ")
              os.system("sudo rm /usr/src/ReconToCrack/Wpa2ToHashcat  && sudo rm /usr/src/ReconToCrack/Master")
