@@ -1,5 +1,4 @@
-
-#Writed By BoxOfWhiteHat
+BoxOfWhiteHat
 
 
 #Wpa2ToHashcat v1 : 
