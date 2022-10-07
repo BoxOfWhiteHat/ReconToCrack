@@ -61,8 +61,8 @@ def install():
              cprint("extract hashcat-6.2.5.7z and rename to hashcat ","green",attrs=["bold"])
              
     else:
-          print("")
-          cprint(" Only Support  kali linux and   DragonOS Focal ","green",attrs=["bold"])
+     print("")
+     cprint("Only Support kali linux and DragonOS Focal ","green",attrs=["bold"])
           
 install()
       
