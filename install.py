@@ -5,6 +5,7 @@
 import os
 import sys
 import termcolor
+import time
 from termcolor import cprint , colored
 def install():
     kali=("1")
@@ -33,6 +34,9 @@ def install():
           cprint("Folder Knoashi Created","green",attrs=["bold"])
           os.system("cd /root/ReconToCrack && chmod +x * && mv *.torrent /root/ReconToCrack/Kaonashi/wordlists ")
           os.system("rm /root/ReconToCrack/DragonWpa2ToHashcat  && rm /root/ReconToCrack/DragonMaster")
+          cprint("INSTALLATION TERMINÉ ... TYPE CTRL-C","green",attrs=["bold"])
+          time.sleep(200)
+          install()
     if OsInstaller == Cemaxecuter:  
           cprint("[*]Install DragonOs Requirement ...","green",attrs=["bold"])
           print("")
@@ -59,6 +63,9 @@ def install():
              os.system("cd /usr/src/ReconToCrack  && sudo wget https://github.com/hashcat/hashcat/releases/download/v6.2.5/hashcat-6.2.5.7z ")  
              print("")
              cprint("extract hashcat-6.2.5.7z and rename to hashcat ","green",attrs=["bold"])
+             cprint("INSTALLATION TERMINÉ ... TYPE CTRL-C","green",attrs=["bold"])
+             time.sleep(200)
+             install()
              
     else:
      print("")
