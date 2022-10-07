@@ -20,10 +20,11 @@ def IamHereCrackMe():
        cprint("")
        cprint("[+]Done TARGET FILE TargetHash.hc22000  ","yellow",attrs=["bold"])     
        cprint("[+]Start Cracking ","yellow",attrs=["bold"]) 
-       print("")
-       os.system("cd /root/ReconToCrack/Kaonashi/wordlists && pwd")
+       
        print("")
        cprint("[WordLists Path]:","blue",attrs=["bold"])
+       print("")
+       os.system("cd /root/ReconToCrack/Kaonashi/wordlists && pwd")
        print("")
        os.system("cd /root/ReconToCrack/Kaonashi/wordlists && ls -alt")
        print("")
