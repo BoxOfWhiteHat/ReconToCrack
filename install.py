@@ -32,7 +32,7 @@ def install():
           os.system("cd /root/ReconToCrack && mkdir Kaonashi && cd Kaonashi && mkdir wordlists")
           cprint("Folder Knoashi Created","green",attrs=["bold"])
           os.system("cd /root/ReconToCrack && chmod +x * && mv *.torrent /root/ReconToCrack/Kaonashi/wordlists ")
-          os.system("rm /usr/src/ReconToCrack/DragonWpa2ToHashcat  && rm /usr/src/ReconToCrack/DragonMaster")
+          os.system("rm /root/ReconToCrack/DragonWpa2ToHashcat  && rm /root/ReconToCrack/DragonMaster")
     if OsInstaller == Cemaxecuter:  
           cprint("[*]Install DragonOs Requirement ...","green",attrs=["bold"])
           print("")
