@@ -1,9 +1,5 @@
 
-
-
-   BoxOfWhiteHat
- 
-#Wpa2ToHashcat v1 :                    #Auto Capture Data And Cracking Using (Hashcat) + wordlists (Kaonashi)                    #Tested in Kali Linux (root)
+BoxOfWhiteHat
 
 #Wpa2ToHashcat v1 : 
                   #Auto Capture Data And Cracking Using (Hashcat) + wordlists (Kaonashi) 
