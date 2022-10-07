@@ -18,7 +18,7 @@ def ReconToCrack():
     os.system("iwconfig")
     print("")
     Hcx=input(termcolor.colored("[+]Enter Monitor Interface >> " ,"white",attrs=["bold"]))
-    Path=(" > /usr/src/ReconToCrack/output/BSSID.txt")
+    Path=(" > /root/ReconToCrack/output/BSSID.txt")
     cprint("[+]After 1 Min type Ctrl-C ","yellow",attrs=["bold"])
     
     os.system("hcxdumptool --do_rcascan -i "+  "\t" + Hcx + "\t" +  Path)
