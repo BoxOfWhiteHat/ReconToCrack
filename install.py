@@ -8,9 +8,11 @@ import termcolor
 import time
 from termcolor import cprint , colored
 def install():
+    print("")
+    print("")
     kali=("1")
     Cemaxecuter=("2")
-
+    
     cprint(" [1] kali linux / [2] DragonOS Focal By Cemaxecuter","green",attrs=["bold"])
     print("")
     OsInstaller=input(termcolor.colored("[*]System :"  ,"white",attrs=["bold"]))
