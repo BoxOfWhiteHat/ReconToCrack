@@ -12,8 +12,8 @@ def install():
     print("")
     kali=("1")
     Cemaxecuter=("2")
-    
-    cprint(" [1] kali linux / [2] DragonOS Focal By Cemaxecuter","green",attrs=["bold"])
+    Pineapple=("3")
+    cprint(" [1] kali linux / [2] DragonOS Focal By Cemaxecuter / [3] Wifi Pineapple","green",attrs=["bold"])
     print("")
     OsInstaller=input(termcolor.colored("[*]System :"  ,"white",attrs=["bold"]))
     if OsInstaller == kali:   
@@ -68,7 +68,24 @@ def install():
              cprint("INSTALLATION TERMINÉ ... TYPE CTRL-C","green",attrs=["bold"])
              time.sleep(200)
              install()
-             
+    if OsInstaller == Pineapple:
+       os.system("opkg update")
+       os.system("opkg install git-http && opkg install python-pip3 && pip3 install termcolor && pip3 install pyfiglet")
+       os.system("git clone https://github.com/BoxOfWhiteHat/ReconToCrack")
+       os.system("git clone https://github.com/adde88/hcxtools-hcxdumptool-openwrt && cd hcxtools-hcxdumptool-openwrt  && bash INSTALL.sh ")
+       #cprint("INSTALLATION TERMINÉ ... TYPE CTRL-C","green",attrs=["bold"])
+       if not os.path.exists("/usr/src/ReconToCrack/output"):
+             cprint("Folder output Created","green",attrs=["bold"])
+             os.system("cd /usr/src/ReconToCrack && mkdir output")
+       if not os.path.exists("/usr/src/ReconToCrack/Kaonashi"):
+             os.system("cd /usr/src/ReconToCrack && mkdir Kaonashi && cd Kaonashi && mkdir wordlists ")
+             cprint("Folder Knoashi Created","green",attrs=["bold"])
+             os.system("cd /usr/src/ReconToCrack && chmod +x * && mv *.torrent /usr/src/ReconToCrack/Kaonashi/wordlists  ")
+             os.system("sudo rm /usr/src/ReconToCrack/Wpa2ToHashcat  && sudo rm /usr/src/ReconToCrack/Master")
+       if not os.path.exists("/usr/src/ReconToCrack/Result"):    
+             os.system("cd /usr/src/ReconToCrack && mkdir Result")
+             cprint("Folders Created","green",attrs=["bold"]) 
+             os.system("cd /usr/src/ReconToCrack && chmod +x * && mv *.torrent /usr/src/ReconToCrack/Kaonashi/wordlists  ")    
     else:
      print("")
      cprint("Only Support kali linux and DragonOS Focal ","green",attrs=["bold"])
