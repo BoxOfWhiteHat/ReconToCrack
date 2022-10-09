@@ -80,6 +80,5 @@ def ReconToCrack():
        #os.system("hashcat -m 22000 /root/ReconToCrack/Result/TargetHash.hc22000 " + "\t" + world) 
        #print("")
        #os.system("cat /root/.local/share/hashcat/hashcat.potfile")
-    else:
-          ReconToCrack()   
+      
 ReconToCrack()
