@@ -70,7 +70,7 @@ def install():
              install()
     if OsInstaller == Pineapple:
        os.system("opkg update")
-       os.system("opkg install git-http && opkg install python-pip3 && pip3 install termcolor && pip3 install pyfiglet")
+       os.system("opkg install git-http php7-cli && opkg install python-pip3 && pip3 install termcolor && pip3 install pyfiglet")
        os.system("git clone https://github.com/BoxOfWhiteHat/ReconToCrack")
        os.system("git clone https://github.com/adde88/hcxtools-hcxdumptool-openwrt && cd hcxtools-hcxdumptool-openwrt  && bash INSTALL.sh ")
        #cprint("INSTALLATION TERMINÉ ... TYPE CTRL-C","green",attrs=["bold"])
