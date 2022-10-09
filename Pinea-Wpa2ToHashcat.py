@@ -65,7 +65,7 @@ def ReconToCrack():
        cprint("[+]Done TARGET FILE TargetHash.hc22000  ","yellow",attrs=["bold"])     
        cprint("[+]Start Cracking ","yellow",attrs=["bold"]) 
        print("")
-       cprint("[+]Upload http://172.16.42.1:8080/TargetHash.hc22000 To You Server For Cracking ","yellow",attrs=["bold"])
+       cprint("[+]Upload http://172.16.42.1:8080/TargetHash.hc22000 To Your Server For Cracking ","yellow",attrs=["bold"])
        print("")
        print("")
        os.system("cd /root/ReconToCrack/Result/ && php-cli -S 0.0.0.0:8080 ")
