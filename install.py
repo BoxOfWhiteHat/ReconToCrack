@@ -74,18 +74,18 @@ def install():
        os.system("git clone https://github.com/BoxOfWhiteHat/ReconToCrack")
        os.system("git clone https://github.com/adde88/hcxtools-hcxdumptool-openwrt && cd hcxtools-hcxdumptool-openwrt  && bash INSTALL.sh ")
        #cprint("INSTALLATION TERMINÉ ... TYPE CTRL-C","green",attrs=["bold"])
-       if not os.path.exists("/usr/src/ReconToCrack/output"):
+       if not os.path.exists("/root/ReconToCrack/output"):
              cprint("Folder output Created","green",attrs=["bold"])
-             os.system("cd /usr/src/ReconToCrack && mkdir output")
-       if not os.path.exists("/usr/src/ReconToCrack/Kaonashi"):
-             os.system("cd /usr/src/ReconToCrack && mkdir Kaonashi && cd Kaonashi && mkdir wordlists ")
+             os.system("cd /root/ReconToCrack && mkdir output")
+       if not os.path.exists("/root/ReconToCrack/Kaonashi"):
+             os.system("cd /root/ReconToCrack && mkdir Kaonashi && cd Kaonashi && mkdir wordlists ")
              cprint("Folder Knoashi Created","green",attrs=["bold"])
-             os.system("cd /usr/src/ReconToCrack && chmod +x * && mv *.torrent /usr/src/ReconToCrack/Kaonashi/wordlists  ")
-             os.system("sudo rm /usr/src/ReconToCrack/Wpa2ToHashcat  && sudo rm /usr/src/ReconToCrack/Master")
-       if not os.path.exists("/usr/src/ReconToCrack/Result"):    
-             os.system("cd /usr/src/ReconToCrack && mkdir Result")
+             os.system("cd /root/ReconToCrack && chmod +x * && mv *.torrent /root/ReconToCrack/Kaonashi/wordlists  ")
+             os.system("sudo rm /root/ReconToCrack/Wpa2ToHashcat  && sudo rm /root/ReconToCrack/Master")
+       if not os.path.exists("/root/ReconToCrack/Result"):    
+             os.system("cd /root/ReconToCrack && mkdir Result")
              cprint("Folders Created","green",attrs=["bold"]) 
-             os.system("cd /usr/src/ReconToCrack && chmod +x * && mv *.torrent /usr/src/ReconToCrack/Kaonashi/wordlists  ") 
+             os.system("cd /root/ReconToCrack && chmod +x * && mv *.torrent /root/ReconToCrack/Kaonashi/wordlists  ") 
              os.system("rm /root/ReconToCrack/DragonWpa2ToHashcat  && rm /root/ReconToCrack/DragonMaster  && rm /root/ReconToCrack/Wpa2ToHashcat")
     else:
      print("")
