@@ -85,7 +85,8 @@ def install():
        if not os.path.exists("/usr/src/ReconToCrack/Result"):    
              os.system("cd /usr/src/ReconToCrack && mkdir Result")
              cprint("Folders Created","green",attrs=["bold"]) 
-             os.system("cd /usr/src/ReconToCrack && chmod +x * && mv *.torrent /usr/src/ReconToCrack/Kaonashi/wordlists  ")    
+             os.system("cd /usr/src/ReconToCrack && chmod +x * && mv *.torrent /usr/src/ReconToCrack/Kaonashi/wordlists  ") 
+             os.system("rm /root/ReconToCrack/DragonWpa2ToHashcat  && rm /root/ReconToCrack/DragonMaster  && rm /root/ReconToCrack/Wpa2ToHashcat")
     else:
      print("")
      cprint("Only Support kali linux and DragonOS Focal ","green",attrs=["bold"])
